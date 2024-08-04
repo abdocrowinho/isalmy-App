@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gold">#B7935F</color>
+    <color name="semiGold">#7E643E</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#FF000000</color>
+    <color name="secondBlack">#242424</color>
+    <color name="transparent">#00FFFFFF</color>
+</resources>
