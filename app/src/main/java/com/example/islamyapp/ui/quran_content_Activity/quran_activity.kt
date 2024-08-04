@@ -44,7 +44,7 @@ class quran_activity : AppCompatActivity() {
     }
 
     private fun setAdapter() {
-   val  adapter :  QuranContentAdapter = QuranContentAdapter(verses)
+   val  adapter  = QuranContentAdapter(verses)
         binding.RvQuranVerses.RvQuranVerses.adapter = adapter
     }
 
