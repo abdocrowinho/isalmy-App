@@ -1,10 +1,7 @@
 package com.example.islamyapp.ui.quran_content_Activity
 
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
-import com.example.islamyapp.R
 import com.example.islamyapp.databinding.ActivityQuranBinding
 
 class quran_activity : AppCompatActivity() {
