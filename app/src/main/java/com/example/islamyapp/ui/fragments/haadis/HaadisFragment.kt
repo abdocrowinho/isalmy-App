@@ -33,7 +33,6 @@ class HaadisFragment : Fragment() {
     }
 
     private fun readHaadis() {
-        val listOfNamesHaadis = mutableListOf<HaadisModel>()
         val listOfHaadis = requireContext().assets.open("ahadeth.txt")
             .bufferedReader().use { it.readText() }
 
