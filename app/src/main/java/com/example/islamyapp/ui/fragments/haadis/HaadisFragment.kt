@@ -1,11 +1,13 @@
 package com.example.islamyapp.ui.fragments.haadis
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.islamyapp.databinding.FragmentHaadisBinding
+import com.example.islamyapp.ui.Constants
 
 class HaadisFragment : Fragment() {
     lateinit var binding: FragmentHaadisBinding
@@ -30,6 +32,19 @@ class HaadisFragment : Fragment() {
     private fun bindHaadisList() {
         val adapter = HaadisRecyclerViewAdapter(listOfTittles)
         binding.RvHaadis.adapter = adapter
+        adapter.setOnItemClickListener = HaadisRecyclerViewAdapter.OnClick { haadis, position ->
+            navigateToHaadisActivity(position)
+        }
+    }
+
+    private fun navigateToHaadisActivity(position: Int) {
+
+        val intent = Intent(activity, HaadisActivity::class.java)
+        val haadis = listOfTittles[position]
+        intent.putExtra(Constants.haadis, haadis)
+        startActivity(intent)
+
+
     }
 
     private fun readHaadis() {

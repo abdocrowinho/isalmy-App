@@ -22,5 +22,14 @@ class HaadisRecyclerViewAdapter(val ListOfHaadises: List<HaadisModel>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val haadis = ListOfHaadises[position]
         holder.binding.contentHaadis.text = haadis.tittle
+        holder.binding.root.setOnClickListener {
+            setOnItemClickListener!!.onClickListener(haadis, position)
+        }
     }
+
+    fun interface OnClick {
+        fun onClickListener(haadis: HaadisModel, position: Int)
+    }
+
+    var setOnItemClickListener: OnClick? = null
 }
