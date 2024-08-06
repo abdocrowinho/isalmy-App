@@ -4,4 +4,5 @@
     <string name="quran">quran</string>
     <string name="tsabeh">tsabeh</string>
     <string name="hadis">hadis</string>
+    <string name="haadis_logo" translatable="false">haadis Logo</string>
 </resources>
